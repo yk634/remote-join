@@ -3,7 +3,7 @@ jobs:
     requires:
       - ~commit
       - ~pr
-      - ~remote02
+      - ~remote04
     image: centos:centos7
     steps:
       - echo: echo hoge
@@ -22,6 +22,12 @@ jobs:
   remote03:
     requires:
       - remote02
+    image: centos:centos7
+    steps:
+      - echo: echo hoge
+  remote04:
+    requires:
+      - ~sd@9297:main
     image: centos:centos7
     steps:
       - echo: echo hoge
