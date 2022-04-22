@@ -3,7 +3,7 @@ jobs:
     requires:
       - ~commit
       - ~pr
-      - ~remote01
+      - ~remote02
     image: centos:centos7
     steps:
       - echo: echo hoge
