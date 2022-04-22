@@ -1,0 +1,21 @@
+jobs:
+  main:
+    requires:
+      - ~commit
+      - ~pr
+      - ~remote01
+    image: centos:centos7
+    steps:
+      - echo: echo hoge
+  remote01:
+    requires:
+      - ~sd@9297:main
+    image: centos:centos7
+    steps:
+      - echo: echo hoge
+  sub01:
+    requires:
+      - main
+    image: centos:centos7
+    steps:
+      - echo: echo hoge
