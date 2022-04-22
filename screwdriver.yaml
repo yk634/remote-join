@@ -19,6 +19,12 @@ jobs:
     image: centos:centos7
     steps:
       - echo: echo hoge
+  remote03:
+    requires:
+      - remote02
+    image: centos:centos7
+    steps:
+      - echo: echo hoge
   sub01:
     requires:
       - main
