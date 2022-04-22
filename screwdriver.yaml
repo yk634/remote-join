@@ -36,7 +36,7 @@ jobs:
       - main
     image: centos:centos7
     steps:
-      - echo: echo hoge
+      - echo: exit 1
   sub02:
     requires:
       - ~commit
