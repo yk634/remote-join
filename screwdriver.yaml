@@ -37,3 +37,10 @@ jobs:
     image: centos:centos7
     steps:
       - echo: echo hoge
+  sub02:
+    requires:
+      - ~commit
+      - ~pr
+    image: centos:centos7
+    steps:
+      - echo: echo hoge
