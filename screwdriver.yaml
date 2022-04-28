@@ -21,3 +21,10 @@ jobs:
       - sd@9297:job-2-2
     steps:
       - echo: echo hoge
+
+  main:
+    requires:
+      - ~job-1-4
+      - ~job-2-3
+    steps:
+      - echo: echo hoge
